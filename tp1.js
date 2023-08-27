@@ -21,11 +21,7 @@ const juan = {
     return (
       obj.obtenerColor().fuerte() ||
       obj.material().brilla() ||
-      (obj.obtenerPeso() > 1200
-        ? obj.obtenerPeso() < 1800
-          ? true
-          : false
-        : false)
+      (obj.obtenerPeso() > 1200 && obj.obtenerPeso() < 1800)
     );
   },
 };
@@ -201,7 +197,9 @@ const banquito = {
     return madera;
   },
   cambiarPeso(peso) {},
-  cambiarColor(color) {},
+  cambiarColor(color) {
+    this.color = color;
+  },
   cambiarInterior(obj) {},
 };
 
@@ -218,7 +216,9 @@ const cajita = {
   },
   cambiarPeso(peso) {},
   cambiarColor(color) {},
-  cambiarInterior(obj) {},
+  cambiarInterior(obj) {
+    this.interior = obj;
+  },
 };
 
 const bolichito = {
@@ -248,12 +248,12 @@ const bolichito = {
     return persona.gusto(this.mostrador) || persona.gusto(this.vidriera);
   },
   cambiarMostrador(obj) {
-    this.vidriera == obj
+    this.vidriera === obj
       ? console.log("no se pueden duplicar objetos -cambio rechazado")
       : (this.mostrador = obj);
   },
   cambiarVidriera(obj) {
-    this.mostrador == obj
+    this.mostrador === obj
       ? console.log("no se pueden duplicar objetos -cambio rechazado")
       : (this.vidriera = obj);
   },
