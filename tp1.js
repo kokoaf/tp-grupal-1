@@ -258,12 +258,3 @@ const bolichito = {
       : (this.vidriera = obj);
   },
 };
-
-bolichito.cambiarMostrador(placa);
-bolichito.cambiarVidriera(bibliteca);
-
-console.log(bolichito.puedeOfrecerAlgoA(luisa));
-console.log(bolichito.puedeOfrecerAlgoA(juan));
-console.log(bolichito.puedeOfrecerAlgoA(estefania));
-console.log(bolichito.puedeOfrecerAlgoA(rosa));
-console.log(cajita.obtenerPeso());
