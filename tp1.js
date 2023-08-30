@@ -19,8 +19,7 @@ const luisa = {
 const juan = {
   gusto(obj) {
     return (
-      obj.obtenerColor().fuerte() ||
-      obj.material().brilla() ||
+      !obj.obtenerColor().fuerte() ||
       (obj.obtenerPeso() > 1200 && obj.obtenerPeso() < 1800)
     );
   },
