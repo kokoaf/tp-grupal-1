@@ -1,6 +1,6 @@
 const rosa = {
   gusto(obj) {
-    return obj.obtenerPeso() > 2000;
+    return obj.obtenerPeso() <= 2000;
   },
 };
 
@@ -115,7 +115,7 @@ const pelota = {
   cambiarInterior(obj) {},
 };
 
-const bibliteca = {
+const biblioteca = {
   obtenerPeso() {
     return 8000;
   },
@@ -257,3 +257,78 @@ const bolichito = {
       : (this.vidriera = obj);
   },
 };
+
+console.log(
+  `El bolichito puede ofrecer algo a luisa? ${bolichito.puedeOfrecerAlgoA(
+    luisa
+  )}`
+);
+console.log(
+  `El bolichito puede ofrecer algo a juan? ${bolichito.puedeOfrecerAlgoA(juan)}`
+);
+
+console.log(
+  `El bolichito puede ofrecer algo a estefania? ${bolichito.puedeOfrecerAlgoA(
+    estefania
+  )}`
+);
+
+console.log(
+  `El bolichito puede ofrecer algo a rosa? ${bolichito.puedeOfrecerAlgoA(rosa)}`
+);
+
+console.log("cambiando el objeto del mostrador por un muñeco");
+bolichito.cambiarMostrador(muñeco);
+
+console.log(
+  `El bolichito puede ofrecer algo a luisa? ${bolichito.puedeOfrecerAlgoA(
+    luisa
+  )}`
+);
+
+console.log(
+  "---------------------------------------------------------------------------------"
+);
+
+console.log(
+  `los objetos del bolichito tienen el mismo color? ${bolichito.esMonocromatico()}`
+);
+
+console.log(`los objetos del bolichito brillan? ${bolichito.esBrillante()}`);
+
+console.log(
+  `el objeto del mostrador pesa mas que el de la vidriera? ${bolichito.estaDesequilibrado()}`
+);
+
+console.log(
+  `el bolichisto tiene algo de color verde? ${bolichito.tieneAlgoDeColor(
+    verde
+  )}`
+);
+
+console.log(
+  `el bolichisto tiene algo de color celeste? ${bolichito.tieneAlgoDeColor(
+    celeste
+  )}`
+);
+
+console.log(`el bolichito puede mejorar? ${bolichito.puedeMejorar()}`);
+
+console.log(
+  "---------------------------------------------------------------------------------"
+);
+
+console.log(`el rojo es fuerte? ${rojo.fuerte()}`);
+
+console.log(`la caja pesa: ${cajita.obtenerPeso()}`);
+
+cajita.cambiarInterior(biblioteca);
+
+console.log(`la caja ahora pesa: ${cajita.obtenerPeso()}`);
+
+console.log(`la placa pesa: ${placa.peso}`);
+
+console.log("aumentando peso...");
+placa.cambiarPeso(10000);
+
+console.log(`ahora la placa pesa: ${placa.peso}`);
